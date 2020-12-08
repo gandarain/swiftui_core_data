@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct NavigationViewApp: App {
-  @StateObject var environmentObject = UserSetting()
+  let persistenceContainer = PersistanceUserData.shared
   
   var body: some Scene {
     WindowGroup {
-      ContentView().environmentObject(environmentObject)
+      ContentView()
+        .environment(\.managedObjectContext, persistenceContainer.container.viewContext)
     }
   }
 }
