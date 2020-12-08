@@ -1,4 +1,4 @@
-# Example Login/Logout Flow in Swiftui
+# Example Core Data in Swiftui
 Basic example to use core data in swiftui.
 
 # Requirement
